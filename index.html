@@ -676,13 +676,13 @@ const wk=$('#wk');
 wk.innerHTML=P.map(([k,u,n,c,d,s,sc])=>`<a class="pj rv ${s}" href="https://${u}" target="_blank" rel="noopener" data-cur>
  <span class="go">Bekijk live ↗</span>
  <div class="fr"><div class="bar"><i></i><i></i><i></i><div class="url"><b style="color:var(--green)">●</b> ${u.replace('www.','')}</div></div>
- <div class="vp"><img ${sc?'class="sc"':''} src="assets/shots/${sc?'t-':''}${k}.jpg" alt="Screenshot van ${u.replace('www.','')}" loading="lazy" decoding="async" width="1100" height="${sc?2444:688}"></div></div>
+ <div class="vp"><img ${sc?'class="sc"':''} src="assets/shots/${sc?'t-':''}${k}.jpg?v=1015" alt="Screenshot van ${u.replace('www.','')}" loading="lazy" decoding="async" width="1100" height="${sc?2444:688}"></div></div>
  <div class="pm"><h3>${n}</h3><span class="mono">${c}</span></div><p>${d}</p></a>`).join('');
 $$('.vp img.sc').forEach(im=>{const f=()=>{const v=im.parentElement;im.style.setProperty('--d',-(im.offsetHeight-v.offsetHeight)+'px')};im.complete?f():im.addEventListener('load',f);addEventListener('resize',f)});
 
 /* hero builder */
 const H=[['plutusestate','plutusestate.com'],['ehbodepot','ehbodepot.nl'],['4neon','4neon.com'],['strapitec','strapitec.com'],['droompleisters','droompleisters.nl'],['pegasusdepot','pegasusdepot.com']];
-H.slice(1).forEach(([k])=>{const i=new Image();i.src='assets/shots/'+k+'.jpg'});
+H.slice(1).forEach(([k])=>{const i=new Image();i.src='assets/shots/'+k+'.jpg?v=1015'});
 const wf=$('#wf'),sh=$('#shot'),sc=$('#scan'),bu=$('#b-url'),st=[$('#s1'),$('#s2'),$('#s3')];
 const step=n=>st.forEach((e,i)=>e.classList.toggle('on',i===n));
 let hi=0;
@@ -690,7 +690,7 @@ function cycle(){
   const [k,u]=H[hi%H.length];hi++;
   sh.classList.remove('on');step(0);bu.textContent='schets · '+u;
   wf.classList.remove('on');void wf.offsetWidth;wf.classList.add('on');
-  setTimeout(()=>{sh.style.backgroundImage=`url(assets/shots/${k}.jpg)`;step(1);sc.classList.remove('run');void sc.offsetWidth;sc.classList.add('run');sh.classList.add('on');bu.textContent=u},1300);
+  setTimeout(()=>{sh.style.backgroundImage=`url(assets/shots/${k}.jpg?v=1015)`;step(1);sc.classList.remove('run');void sc.offsetWidth;sc.classList.add('run');sh.classList.add('on');bu.textContent=u},1300);
   setTimeout(()=>step(2),2600);
   setTimeout(cycle,5200);
 }
