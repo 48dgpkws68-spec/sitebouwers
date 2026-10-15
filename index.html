@@ -186,6 +186,32 @@ section{position:relative}
 .nh .bb{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
 .nh .bb span{border-radius:999px;padding:10px 16px;font-size:.8rem;font-weight:700;background:#38d39f;color:#0f1218}
 .nh .bb span+span{background:transparent;border:1px solid rgba(245,242,235,.3);color:#F5F2EB}
+.ntop{display:flex;justify-content:space-between;gap:12px;padding:7px 5%;font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;background:#38d39f;color:#0f1218;font-weight:700}
+.ntop i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#0f1218;margin-right:6px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.nn .nc{display:flex;gap:10px;align-items:center}
+.nn .ph{font-family:var(--mono);font-size:.7rem;color:rgba(245,242,235,.75)}
+.nn .cta{background:#38d39f;color:#0f1218;font-weight:800;border-radius:999px;padding:8px 14px;font-size:.74rem}
+.nh{grid-template-columns:.85fr 1.15fr !important}.nh .bk{order:-1}
+.nh .tr{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:.72rem;color:rgba(245,242,235,.7)}
+.nh .tr b{color:#38d39f;margin-right:4px}
+.bk{border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:16px;display:grid;gap:11px;box-shadow:0 20px 50px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+.bkh{display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.bkh span{font-family:var(--mono);font-size:.6rem;color:#38d39f}
+.bk .chips,.bk .days,.bk .slots{display:flex;gap:6px;flex-wrap:wrap}
+.bk .chips span,.bk .slots span{font-size:.68rem;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.18)}
+.bk .days span{flex:1;text-align:center;padding:6px 0;border-radius:10px;border:1px solid rgba(255,255,255,.14);font-weight:800;font-size:.85rem}
+.bk .days small{display:block;font-weight:400;font-size:.58rem;opacity:.6}
+.bk .on{background:#38d39f;color:#0f1218;border-color:#38d39f !important}
+.bk .slots .off{opacity:.3;text-decoration:line-through}
+.bk .go{background:#F5F2EB;color:#0f1218;font-weight:800;border-radius:10px;padding:10px;text-align:center;font-size:.78rem}
+.bk .sv{font-size:.66rem;color:rgba(245,242,235,.7);display:grid;gap:6px;padding-top:4px;border-top:1px dashed rgba(255,255,255,.15)}
+.bk .sv small{opacity:.6}
+.bar2{height:6px;border-radius:9px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar2 i{display:block;height:100%;width:68%;background:linear-gradient(90deg,#38d39f,#b6f5dc);border-radius:9px}
+.nsv{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1)}
+.nsv div{padding:12px 5%;border-right:1px solid rgba(255,255,255,.08);display:grid;gap:2px}
+.nsv b{font-size:.8rem}.nsv span{font-size:.66rem;color:rgba(245,242,235,.55)}
 .card3{border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:18px;display:grid;gap:10px}
 .card3 div{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.05)}
 .card3 div b{color:#38d39f;font-family:var(--mono);font-size:.68rem}
@@ -348,7 +374,8 @@ footer .logo{color:var(--paper)}
   .pj,.pj.lg,.pj.md,.pj.full{grid-column:1/-1}.pj.full .vp{aspect-ratio:16/10}
   .row{grid-template-columns:1fr}
   .nh{grid-template-columns:1fr}
-  .nh .card3{display:none}
+  .nh .card3,.nh .bk,.nsv,.ntop span+span,.nn .ph{display:none}
+  .nh{grid-template-columns:1fr !important}
   .nn .x{display:none}
   .old .oc{grid-template-columns:1fr}
   .old .side{display:none}
@@ -450,20 +477,26 @@ html.st .rv{opacity:1;transform:none}html.st #hero h1 .w>span{transform:none}htm
         </div>
         <div class="new" aria-hidden="true">
           <div class="nw">
-            <div class="nn"><b>jansen<i>.</i></b><div class="x"><span>Warmtepompen</span><span>Airco</span><span>Onderhoud</span><span>Contact</span></div></div>
+            <div class="ntop"><span><i></i> Storing? Vandaag nog een monteur in de regio Utrecht</span><span>Ma t/m za · 07:00 tot 21:00</span></div>
+            <div class="nn"><b>jansen<i>.</i></b><div class="x"><span>Warmtepompen</span><span>CV-ketels</span><span>Airco</span><span>Onderhoud</span><span>Over ons</span></div><div class="nc"><span class="ph">030 123 45 67</span><span class="cta">Plan een monteur</span></div></div>
             <div class="nh">
-              <div class="card3">
-                <div>CV-ketel vervangen <b>VASTE PRIJS</b></div>
-                <div>Warmtepomp advies <b>OP LOCATIE</b></div>
-                <div>Storing melden <b>24/7</b></div>
-              </div>
-              <div>
-                <span class="e">Installateur in jouw regio</span>
+              <div class="nl">
+                <span class="e">Erkend installateur · sinds 1998</span>
                 <h5>Morgen warm. <em>Vandaag</em> geregeld.</h5>
-                <p>Storing, vervanging of een warmtepomp? Je kiest online een moment en een monteur komt langs. Vaste prijs, geen verrassingen.</p>
-                <div class="bb"><span>Plan een monteur</span><span>Bereken je besparing</span></div>
+                <p>Storing, vervanging of een warmtepomp? Kies online een moment, je monteur komt langs. Vaste prijs vooraf, geen verrassingen achteraf.</p>
+                <div class="bb"><span>Plan een monteur →</span><span>Bereken je besparing</span></div>
+                <div class="tr"><span><b>✓</b> Vaste prijs vooraf</span><span><b>✓</b> 5 jaar garantie</span><span><b>✓</b> 24/7 storingsdienst</span></div>
+              </div>
+              <div class="bk">
+                <div class="bkh"><b>Plan je afspraak</b><span>Stap 2 van 3</span></div>
+                <div class="chips"><span>CV-ketel</span><span class="on">Warmtepomp</span><span>Airco</span><span>Storing</span></div>
+                <div class="days"><span><small>Di</small>21</span><span class="on"><small>Wo</small>22</span><span><small>Do</small>23</span><span><small>Vr</small>24</span><span><small>Za</small>25</span></div>
+                <div class="slots"><span>08:00</span><span class="on">10:30</span><span>13:00</span><span class="off">15:30</span></div>
+                <div class="go">Bevestig woensdag 10:30 →</div>
+                <div class="sv"><span>Indicatie besparing warmtepomp</span><div class="bar2"><i></i></div><small>Bereken je eigen situatie in 1 minuut</small></div>
               </div>
             </div>
+            <div class="nsv"><div><b>CV-ketels</b><span>Vervangen en onderhoud</span></div><div><b>Warmtepompen</b><span>Advies op locatie</span></div><div><b>Airco</b><span>Koelen en verwarmen</span></div><div><b>Storingen</b><span>Snel ter plaatse</span></div></div>
           </div>
         </div>
         <span class="lbl l">Voor</span><span class="lbl r">Na · Sitebouwers</span>
