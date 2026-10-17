@@ -1,0 +1,119 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bistro &amp; Lunchroom Fesleyen · Utrecht</title>
+<meta name="description" content="Ontbijt, lunch, grill en Turkse gerechten aan het Ella Fitzgeraldplein.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Shippori+Mincho:wght@700;800&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ea;--ink:#14233c;--accent:#1f4fa3;--accent2:#d98a2b;--paper:#fffdf7;--font:'Fraunces';--body:'DM Sans';--h1c:#14233c}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body),system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+.demo-bar{position:fixed;inset:auto 12px 12px auto;z-index:50;background:#111116;color:#fff;font:600 13px 'DM Sans',sans-serif;padding:10px 14px;border-radius:999px;box-shadow:0 8px 24px #0004;text-decoration:none}
+.demo-bar b{color:#ff5a26}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,48px);transition:background .3s}
+nav.vast{background:var(--paper);color:#111;box-shadow:0 2px 20px #0002}
+nav .logo{font-family:var(--font),serif;font-size:22px;font-weight:900;text-decoration:none}
+nav .cta{background:var(--accent);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px}
+/* objecten */
+.obj{position:absolute;inset:0;overflow:hidden;z-index:0}
+.obj-cloth{perspective:900px}
+.cloth{position:absolute;left:-50%;right:-50%;top:20%;bottom:-60%;transform:rotateX(58deg);transform-origin:top center;
+ background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--accent) 88%,transparent) 0 60px,transparent 60px 120px),
+ repeating-linear-gradient(0deg,color-mix(in srgb,var(--accent) 70%,transparent) 0 60px,#fff9 60px 120px),#fff;
+ box-shadow:inset 0 80px 120px -40px var(--bg)}
+.obj-wood{background:repeating-linear-gradient(92deg,#3a2618 0 14px,#33210f 14px 22px,#402b1b 22px 40px);}
+.obj-wood:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0,#0000,#000a 75%)}
+.noren{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;gap:6px;width:min(720px,90vw);z-index:1}
+.noren span{flex:1;height:160px;background:var(--accent);border-radius:0 0 4px 4px;transform-origin:top;animation:wapper 6s ease-in-out infinite}
+.noren span:nth-child(2){animation-delay:.4s}.noren span:nth-child(3){animation-delay:.8s}.noren span:nth-child(4){animation-delay:1.2s}
+@keyframes wapper{50%{transform:skewX(3deg) scaleY(1.03)}}
+.obj-tiles{background:
+ radial-gradient(circle at 50% 50%,transparent 18px,var(--accent) 19px 22px,transparent 23px),
+ conic-gradient(from 45deg,var(--paper) 25%,color-mix(in srgb,var(--accent) 14%,var(--paper)) 0 50%,var(--paper) 0 75%,color-mix(in srgb,var(--accent) 14%,var(--paper)) 0);
+ background-size:80px 80px;}
+.obj-tiles:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0,transparent 30%,transparent 70%,var(--bg))}
+.obj-bon{background:repeating-linear-gradient(0deg,#0000 0 31px,#0000000d 31px 32px),var(--bg)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:120px 16px 80px;isolation:isolate}
+.hero-inner{position:relative;z-index:2;max-width:1000px}
+.tag{display:inline-block;font:700 12px var(--body);letter-spacing:.2em;text-transform:uppercase;background:var(--paper);color:#111;padding:8px 14px;border-radius:2px;box-shadow:0 4px 0 var(--accent2)}
+h1{font-family:var(--font),serif;font-weight:900;font-size:clamp(54px,12vw,170px);line-height:.88;margin:22px 0;letter-spacing:-.02em;
+ color:var(--h1c);text-shadow:0 3px 0 var(--accent),0 18px 40px #0004}
+.hero p.slogan{font-size:clamp(17px,2.2vw,22px);max-width:560px;margin:0 auto;background:var(--paper);color:#111;padding:14px 20px;transform:rotate(-1deg);box-shadow:0 10px 30px #0003}
+.plate{width:min(420px,70vw);aspect-ratio:1;border-radius:50%;margin:34px auto 0;background:#fff center/cover;border:14px solid #fff;
+ box-shadow:0 0 0 2px #0001,0 30px 60px #0005,inset 0 0 0 6px #f2f2f2;animation:draai 40s linear infinite}
+@keyframes draai{to{transform:rotate(360deg)}}
+.cutlery{position:absolute;top:50%;width:28px;height:340px;z-index:1;opacity:.92}
+.cutlery.l{left:calc(50% - min(330px,46vw))}.cutlery.r{right:calc(50% - min(330px,46vw))}
+/* secties */
+section{position:relative;padding:clamp(70px,10vw,130px) clamp(16px,4vw,48px)}
+.kop{font-family:var(--font),serif;font-size:clamp(38px,6vw,76px);line-height:.95;margin-bottom:12px}
+.sub{max-width:560px;opacity:.8;margin-bottom:46px;font-size:17px}
+.menu{background:var(--accent2);color:var(--paper);overflow:hidden}
+.menu .obj{opacity:.35}
+.cards{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;max-width:1150px;margin:auto}
+.card{background:var(--paper);color:#111;padding:14px 14px 22px;transform:rotate(var(--r));box-shadow:0 18px 40px #0005;transition:transform .35s}
+.card:hover{transform:rotate(0) translateY(-8px) scale(1.03)}
+.card-img{aspect-ratio:4/3;background:#ddd center/cover;margin-bottom:14px}
+.card h3{font-family:var(--font),serif;font-size:24px}.card p{font-size:14px;opacity:.75;margin:6px 0 12px}
+.prijs{font:700 18px var(--body);color:var(--accent)}
+.galerij{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
+.galerij figure{background:#fff;padding:10px 10px 36px;transform:rotate(var(--r));box-shadow:0 14px 30px #0003;width:min(260px,42vw)}
+.galerij img{aspect-ratio:1;object-fit:cover;width:100%}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;max-width:1100px;margin:auto;align-items:start}
+.bon{background:var(--paper);color:#111;font-family:'Space Mono',monospace;padding:30px 26px;box-shadow:0 20px 40px #0003;transform:rotate(1.5deg);
+ -webkit-mask:radial-gradient(circle 8px at 50% 100%,#0000 98%,#000) 0 0/22px 100% repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 8px) no-repeat}
+.bon h3{text-align:center;font-size:18px;letter-spacing:.15em;border-bottom:2px dashed #111;padding-bottom:12px;margin-bottom:14px}
+.bon ul{list-style:none}.bon li{display:flex;gap:8px;padding:5px 0;font-size:14px}.bon li i{flex:1;border-bottom:1px dotted #111;margin-bottom:5px}
+.bon .tot{border-top:2px dashed #111;margin-top:14px;padding-top:12px;text-align:center;font-weight:700}
+.adres{font-size:20px;line-height:1.5}.adres a.btn{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700}
+iframe{width:100%;height:280px;border:0;margin-top:22px;filter:saturate(.8);box-shadow:0 14px 30px #0002}
+.reserveer{text-align:center;background:var(--accent);color:#fff}
+.reserveer form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:30px auto 0}
+.reserveer input,.reserveer select{padding:14px 16px;border:0;border-radius:6px;font:inherit;min-width:140px;flex:1}
+.reserveer button{padding:14px 26px;border:0;border-radius:6px;background:var(--ink);color:var(--paper);font-weight:700;cursor:pointer}
+footer{padding:40px 16px 90px;text-align:center;font-size:14px;opacity:.7}
+.reveal{opacity:0;transform:translateY(40px);transition:all .9s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media (max-width:700px){.cutlery{display:none}}
+</style></head><body>
+<a class="demo-bar" href="https://sitebouwers.com/?ref=demo-fesleyen">Voorbeeld door <b>Sitebouwers</b> · bekijk de offerte</a>
+<nav><a class="logo" href="#">Bistro &amp; Lunchroom Fesleyen</a><a class="cta" href="#reserveer">Reserveer</a></nav>
+<header class="hero"><div class="obj obj-tiles"></div>
+<svg class="cutlery l" viewBox="0 0 28 340"><path d="M6 0v90M14 0v90M22 0v90M4 90q10 30 20 0M14 110v230" stroke="#cfcfcf" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+<svg class="cutlery r" viewBox="0 0 28 340"><path d="M14 0q14 40 0 140v200" stroke="#cfcfcf" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+<div class="hero-inner"><span class="tag">Welkom · Turks · Utrecht</span>
+<h1 style="font-size:clamp(44px,min(12vw,55px),170px)">Bistro &amp; Lunchroom Fesleyen</h1><p class="slogan">Ontbijt, lunch, grill en Turkse gerechten aan het Ella Fitzgeraldplein.</p>
+<div class="plate" style="background-image:url(https://fesleyen.nl/wp-content/uploads/2023/01/1671016858_1OyKcaAdzd.jpg)"></div></div></header>
+<section class="menu" id="menu"><div class="obj obj-tiles"></div><div style="position:relative;max-width:1150px;margin:auto">
+<h2 class="kop reveal">Op de kaart</h2><p class="sub reveal">Een greep uit onze kaart, vers van de grill en uit de oven.</p></div>
+<div class="cards"><article class="card" style="--r:-4deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671013885_k1TRMKeriy.jpg')"></div>
+<h3>Dürüm Adana</h3><p>Twee spiezen gekruid gehakt in een dürüm</p><span class="prijs">€ 14,00</span></article><article class="card" style="--r:3deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671009857_xXpx6q4qbr.jpg')"></div>
+<h3>Lahmacun</h3><p>Dunne Turkse pizza</p><span class="prijs">€ 4,50</span></article><article class="card" style="--r:-2deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671190017_6n2mEWZ8bX.jpg')"></div>
+<h3>Peynir ve dana shoarma</h3><p>Turkse pizza met kaas en kalfsshoarma</p><span class="prijs">€ 11,00</span></article><article class="card" style="--r:5deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671016858_1OyKcaAdzd.jpg')"></div>
+<h3>Broodje köfte</h3><p>Turkse gehaktballetjes in brood</p><span class="prijs">€ 12,00</span></article><article class="card" style="--r:-3deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671013885_k1TRMKeriy.jpg')"></div>
+<h3>Su böregi peynirli</h3><p>Bladerdeeg met fetakaas</p><span class="prijs">€ 5,50</span></article><article class="card" style="--r:2deg">
+<div class="card-img" style="background-image:url('https://fesleyen.nl/wp-content/uploads/2023/01/1671009857_xXpx6q4qbr.jpg')"></div>
+<h3>Halve kip</h3><p>Van de grill</p><span class="prijs">€ 9,00</span></article></div></section>
+<section><h2 class="kop reveal" style="text-align:center">Even binnenkijken</h2><p class="sub reveal" style="margin:0 auto 46px;text-align:center">Bij Bistro &amp; Lunchroom Fesleyen kun je terecht voor ontbijt, lunch, grill en Turkse gerechten. Denk aan Turkse pizza&#x27;s, panini&#x27;s, kapsalon en grillgerechten met kip en döner.</p><div class="galerij"><figure style="--r:-3deg"><img src="https://fesleyen.nl/wp-content/uploads/2023/01/1671013885_k1TRMKeriy.jpg" alt="" loading="lazy"></figure><figure style="--r:2deg"><img src="https://fesleyen.nl/wp-content/uploads/2023/01/1671009857_xXpx6q4qbr.jpg" alt="" loading="lazy"></figure><figure style="--r:-1deg"><img src="https://fesleyen.nl/wp-content/uploads/2023/01/1671190017_6n2mEWZ8bX.jpg" alt="" loading="lazy"></figure></div></section>
+<section><div class="info">
+<div class="bon reveal"><h3>OPENINGSTIJDEN</h3><ul><li><span>ma</span><i></i><span>gesloten</span></li><li><span>di - za</span><i></i><span>11:00 - 21:00</span></li><li><span>zo</span><i></i><span>13:00 - 20:00</span></li></ul><div class="tot">*** TOT ZO ***</div></div>
+<div class="adres reveal"><h2 class="kop">Kom langs</h2><p>Ella Fitzgeraldplein 185<br>3543EN Utrecht</p>
+<p><a href="tel:+31307370648">+31 30 737 06 48</a></p><a class="btn" href="#reserveer">Tafel reserveren</a>
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.0412837%2C52.0993668%2C5.049283699999999%2C52.1033668&layer=mapnik&marker=52.1013668%2C5.0452837" loading="lazy" title="Kaart"></iframe></div></div></section>
+<section class="reserveer" id="reserveer"><h2 class="kop">Schuif aan</h2><p>Reserveer direct, wij bevestigen per mail.</p>
+<form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-size:20px&quot;>Dit is een voorbeeld. In de echte site komt hier jullie reserveringssysteem.</p>'">
+<input type="date" required><select><option>2 personen</option><option>3 personen</option><option>4 personen</option><option>5+ personen</option></select>
+<input type="time" value="19:00"><button>Reserveer</button></form></section>
+<footer>© 2026 Bistro &amp; Lunchroom Fesleyen · Ella Fitzgeraldplein 185, Utrecht</footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});
+addEventListener('scroll',()=>document.querySelector('nav').classList.toggle('vast',scrollY>80));
+document.querySelectorAll('.reveal,.card').forEach(el=>io.observe(el));
+</script></body></html>
