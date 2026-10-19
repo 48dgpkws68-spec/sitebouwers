@@ -1,0 +1,211 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nul33 · Amersfoort</title><meta name="description" content="De gezelligste hotspot in hartje Amersfoort, elke dag open voor gezelligheid."><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Shippori+Mincho:wght@700;800&family=Fraunces:ital,opsz,wght@0,9..144,800;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop">
+<style>
+:root{--bg:#ecebe6;--ink:#111;--accent:#ff4b1f;--accent2:#141414;--paper:#fdfdfb;--h1:#111;--font:'Archivo Black';--body:'Space Mono'}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body),system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}button{font:inherit;cursor:pointer}
+.loader{animation:weg .8s 2.6s ease-in forwards;position:fixed;inset:0;z-index:100;background:var(--accent);display:grid;place-items:center;color:var(--paper)}
+.loader .ring{width:110px;height:110px;border-radius:50%;border:3px solid currentColor;border-top-color:transparent;animation:spin 1s linear infinite}
+.loader p{position:absolute;bottom:14%;font:700 13px var(--body);letter-spacing:.3em;text-transform:uppercase}
+@keyframes weg{to{transform:translateY(-100%);visibility:hidden}}
+@keyframes spin{to{transform:rotate(1turn)}}
+.demo-bar{position:fixed;right:12px;bottom:12px;z-index:90;background:#111116;color:#fff;font:600 13px 'DM Sans',sans-serif;padding:11px 16px;border-radius:999px;box-shadow:0 10px 30px #0005;text-decoration:none}
+.demo-bar b{color:#ff5a26}
+nav{position:fixed;inset:0 0 auto;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,4vw,48px);transition:background .4s,color .4s;color:var(--h1)}
+nav.vast{background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);color:#111;box-shadow:0 1px 0 #0001}
+nav .logo{font:900 22px var(--font),serif;text-decoration:none;color:inherit}
+nav .links{display:flex;gap:26px;font-weight:600;font-size:15px}nav .links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;padding:13px 22px;border-radius:999px;font-weight:700;border:0}
+@media(max-width:760px){nav .links{display:none}}
+.obj{position:absolute;inset:0;overflow:hidden}
+.cloth-wrap{perspective:1000px}
+.cloth{position:absolute;left:-60%;right:-60%;top:28%;height:190%;transform-origin:top center;transform:rotateX(62deg);
+ background:repeating-linear-gradient(90deg,#c8211dd9 0 70px,transparent 70px 140px),repeating-linear-gradient(0deg,#c8211db0 0 70px,#fff8 70px 140px),#fff;
+ animation:drift 18s linear infinite}
+.cloth:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0,transparent 25%)}
+@keyframes drift{to{background-position:140px 140px,140px 140px}}
+.wood{background:repeating-linear-gradient(91deg,#3a2618 0 16px,#30200f 16px 24px,#46301e 24px 44px)}
+.wood:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 20%,#0000,#000c 80%)}
+.noren{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;gap:8px;width:min(760px,92vw);z-index:2}
+.noren span{flex:1;height:150px;background:var(--accent);transform-origin:top;animation:wapper 5s ease-in-out infinite;box-shadow:inset 0 -20px 30px #0003}
+.noren span:nth-child(2){animation-delay:.5s}.noren span:nth-child(3){animation-delay:1s}.noren span:nth-child(4){animation-delay:1.5s}
+@keyframes wapper{50%{transform:skewX(4deg) scaleY(1.04)}}
+.steam{position:absolute;left:50%;bottom:28%;width:240px;height:320px;transform:translateX(-50%);z-index:3;pointer-events:none}
+.steam i{position:absolute;bottom:0;width:60px;height:60px;border-radius:50%;background:#fff3;filter:blur(18px);animation:stoom 6s ease-in infinite}
+.steam i:nth-child(1){left:20%}.steam i:nth-child(2){left:45%;animation-delay:1s}.steam i:nth-child(3){left:65%;animation-delay:2s}
+.steam i:nth-child(4){left:30%;animation-delay:3s}.steam i:nth-child(5){left:55%;animation-delay:4s}.steam i:nth-child(6){left:40%;animation-delay:5s}
+@keyframes stoom{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(-300px) scale(2.4);opacity:0}}
+.tiles{background:radial-gradient(circle,transparent 20px,var(--accent) 21px 24px,transparent 25px),
+ conic-gradient(from 45deg,var(--paper) 25%,color-mix(in srgb,var(--accent) 16%,var(--paper)) 0 50%,var(--paper) 0 75%,color-mix(in srgb,var(--accent) 16%,var(--paper)) 0);
+ background-size:88px 88px;animation:tegel 40s linear infinite}
+@keyframes tegel{to{background-position:88px 176px,88px 176px}}
+.tiles:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,color-mix(in srgb,var(--bg) 75%,transparent),transparent 70%)}
+.receipt-bg{background:repeating-linear-gradient(0deg,transparent 0 31px,#0000000f 31px 32px),var(--bg)}
+.receipt-bg:before{content:"";position:absolute;left:50%;top:-10%;width:min(620px,88vw);height:130%;transform:translateX(-50%) rotate(-3deg);background:var(--paper);box-shadow:0 30px 80px #0002;
+ -webkit-mask:radial-gradient(circle 9px at 50% 100%,#0000 98%,#000) 0 0/24px 100% repeat-x}
+.hero{position:relative;height:100svh;min-height:640px;display:grid;place-items:center;text-align:center;overflow:hidden;isolation:isolate}
+.hero-in{position:relative;z-index:5;padding:0 16px;margin-top:-16vh}
+.tag{display:inline-block;font:700 12px var(--body);letter-spacing:.22em;text-transform:uppercase;background:var(--paper);color:#111;padding:9px 15px;box-shadow:0 4px 0 var(--accent)}
+h1{font-family:var(--font),serif;font-weight:900;line-height:.86;margin:24px 0 20px;letter-spacing:-.02em;color:var(--h1);text-shadow:0 4px 0 var(--accent),0 24px 50px #0005}
+h1 .ch{display:inline-block;will-change:transform}
+.slogan{display:inline-block;max-width:560px;font-size:clamp(16px,2vw,21px);background:var(--paper);color:#111;padding:14px 22px;transform:rotate(-1.5deg);box-shadow:0 14px 34px #0003}
+.plate{position:absolute;z-index:4;left:50%;bottom:-26vmin;width:min(62vmin,560px);aspect-ratio:1;margin-left:calc(min(62vmin,560px) / -2);border-radius:50%;background:#fff;padding:16px;
+ box-shadow:0 0 0 1px #0001,0 50px 90px #0006,inset 0 0 0 8px #f1f1f1}
+.plate img{width:100%;height:100%;object-fit:cover;border-radius:50%;animation:spin 60s linear infinite}
+.fl{position:absolute;z-index:3;width:clamp(70px,10vw,140px);aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 20px 40px #0004}
+.fl0{left:7%;top:24%}.fl1{right:8%;top:20%}.fl2{left:14%;bottom:16%}.fl3{right:13%;bottom:22%}
+.cut{position:absolute;z-index:4;bottom:4%;height:46vmin;width:auto}.cut.l{left:calc(50% - min(46vmin,410px))}.cut.r{right:calc(50% - min(46vmin,410px))}
+.scroll{position:absolute;z-index:6;bottom:22px;left:22px;font:700 11px var(--body);letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;color:var(--h1);opacity:.8}
+@media(max-width:700px){.cut,.fl2,.fl3{display:none}.plate{bottom:-18vmin;width:78vmin;margin-left:-39vmin}}
+.marquee{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:22px 0;transform:rotate(-2deg) scale(1.05);position:relative;z-index:6;margin-top:-30px}
+.marquee .tr{display:inline-block;font:900 clamp(34px,6vw,72px)/1 var(--font),serif;text-transform:uppercase;will-change:transform}
+.marquee b{color:var(--paper);opacity:.6;margin:0 .3em}
+.sig{position:relative;height:100svh;overflow:hidden;background:#000}
+.sig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(18% at 50% 50%);will-change:clip-path,transform}
+.sig .txt{position:absolute;z-index:2;left:clamp(16px,6vw,90px);bottom:12vh;max-width:640px;color:#fff;text-shadow:0 2px 24px #000a}
+.sig .txt small{font:700 12px var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--paper)}
+.sig h2{font:900 clamp(44px,7vw,100px)/.9 var(--font),serif;margin:12px 0 18px}
+.sig p{font-size:clamp(17px,1.8vw,21px);line-height:1.5}.sig .w{opacity:.15;display:inline-block}
+.menu{position:relative;overflow:hidden;background:var(--accent2);color:var(--paper)}
+.menu .obj{opacity:.25}
+.menu-head{position:relative;z-index:2;padding:110px clamp(16px,6vw,90px) 40px}
+.kop{font:900 clamp(42px,6.5vw,88px)/.92 var(--font),serif}
+.sub{max-width:540px;margin-top:14px;opacity:.85;font-size:17px}.note{display:block;margin-top:8px;opacity:.7}
+.track{position:relative;z-index:2;display:flex;gap:40px;padding:30px clamp(16px,6vw,90px) 110px;width:max-content}
+.card{width:min(330px,78vw);flex:none;background:var(--paper);color:#111;padding:14px;box-shadow:0 24px 50px #0006;transform:rotate(var(--r,0deg))}
+.card:nth-child(odd){--r:-3deg}.card:nth-child(even){--r:2.5deg;margin-top:46px}
+.card-img{aspect-ratio:4/3;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .card-img img{transform:scale(1.08)}
+.card-txt{padding:16px 6px 6px;position:relative}.nr{font:700 12px var(--body);color:var(--accent);letter-spacing:.2em}
+.card h3{font:800 26px/1.1 var(--font),serif;margin:6px 0}.card p{font-size:14px;opacity:.7;min-height:40px}
+.prijs{position:absolute;right:4px;top:-34px;background:var(--accent);color:#fff;font:700 14px var(--body);padding:8px;border-radius:50%;transform:rotate(12deg);min-width:68px;aspect-ratio:1;display:grid;place-items:center}
+@media(max-width:760px){.track{width:auto;flex-direction:column;align-items:center}.card:nth-child(even){margin-top:0}}
+.gal{position:relative;min-height:115vh;overflow:hidden;padding:110px 16px}
+.gal .kop{text-align:center;position:relative;z-index:3}.gal .sub{margin:14px auto 0;text-align:center;position:relative;z-index:3}
+.pol{position:absolute;top:36%;left:var(--x);width:min(280px,40vw);background:#fff;padding:12px 12px 44px;box-shadow:0 24px 50px #0003;transform:rotate(var(--r))}
+.pol img{aspect-ratio:1;object-fit:cover;width:100%}
+.pol:nth-of-type(even){top:52%}
+@media(max-width:700px){.pol{width:46vw}.pol:nth-of-type(n+4){display:none}}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:56px;max-width:1150px;margin:auto;padding:110px 16px;align-items:start}
+.bon{background:#fff;color:#111;font-family:'Space Mono',monospace;padding:34px 28px 40px;box-shadow:0 26px 50px #0002;transform:rotate(2deg);transform-origin:top;
+ -webkit-mask:radial-gradient(circle 8px at 50% 100%,#0000 98%,#000) 0 0/22px 100% repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 8px) no-repeat}
+.bon h3{text-align:center;letter-spacing:.2em;border-bottom:2px dashed #111;padding-bottom:12px;margin-bottom:14px}
+.bon ul{list-style:none}.bon li{display:flex;gap:8px;padding:6px 0;font-size:14px}.bon li i{flex:1;border-bottom:1px dotted #111;margin-bottom:5px}
+.bon .tot{border-top:2px dashed #111;margin-top:14px;padding-top:12px;text-align:center;font-weight:700}
+.adres p{font-size:20px;line-height:1.55;margin:16px 0}
+iframe{width:100%;height:300px;border:0;margin-top:24px;border-radius:14px;box-shadow:0 18px 40px #0002}
+.res{position:relative;background:var(--accent);color:#fff;text-align:center;padding:120px 16px;overflow:hidden}
+.res .kop{font-size:clamp(54px,10vw,150px)}
+.res form{max-width:760px;margin:40px auto 0;background:#fff;color:#111;border-radius:22px;padding:26px;box-shadow:0 30px 70px #0004;text-align:left}
+.res label{display:block;font:700 12px var(--body);letter-spacing:.2em;text-transform:uppercase;margin:6px 0 10px;opacity:.6}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:2px solid #0002;background:#fff;border-radius:14px;padding:8px 12px;min-width:58px;text-align:center;font-size:12px;transition:all .2s;color:#111}
+.chip b{display:block;font-size:20px}.chip.on{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-3px)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.stepper{display:flex;align-items:center;gap:14px;border:2px solid #0002;border-radius:14px;padding:6px 12px}
+.stepper button{width:34px;height:34px;border-radius:50%;border:0;background:#0000000d;font-size:18px}
+.res .btn{margin-left:auto;padding:16px 28px;font-size:16px}
+.res .ok{font:800 26px var(--font),serif;padding:30px;text-align:center}
+footer{padding:50px 16px 100px;text-align:center;font-size:14px;opacity:.7}
+.cursor{position:fixed;z-index:95;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--accent);pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s;display:grid;place-items:center;color:#fff;font:700 12px var(--body)}
+.cursor.big{width:84px;height:84px}
+@media(hover:none){.cursor{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<div class="cursor"></div>
+<a class="demo-bar" href="https://sitebouwers.com/demo/r/nul33-amersfoort/offerte.pdf">Voorbeeld door <b>Sitebouwers</b> · bekijk de offerte</a>
+<nav><a class="logo" href="#">Nul33</a><div class="links"><a href="#menu">Menu</a><a href="#over">Over ons</a><a href="#info">Openingstijden</a></div><a class="btn" href="#reserveer">Reserveer</a></nav>
+
+<header class="hero"><div class="obj receipt-bg"></div><img class="fl fl0" src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=300&q=80&auto=format&fit=crop" alt=""><img class="fl fl1" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&q=80&auto=format&fit=crop" alt=""><img class="fl fl2" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&q=80&auto=format&fit=crop" alt=""><img class="fl fl3" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&q=80&auto=format&fit=crop" alt="">
+<svg class="cut l" viewBox="0 0 40 400"><path d="M8 0v110M20 0v110M32 0v110M6 110q14 40 28 0M20 135v265" stroke="#d6d6d6" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+<svg class="cut r" viewBox="0 0 40 400"><path d="M20 0q20 50 0 170v230" stroke="#d6d6d6" stroke-width="9" fill="none" stroke-linecap="round"/></svg>
+<div class="hero-in"><span class="tag">Bestelling · stadsbistro · Amersfoort</span>
+<h1 style="font-size:clamp(46px,min(13vw,228px),180px)"><span class="ch">N</span><span class="ch">u</span><span class="ch">l</span><span class="ch">3</span><span class="ch">3</span></h1>
+<p class="slogan">De gezelligste hotspot in hartje Amersfoort, elke dag open voor gezelligheid.</p></div>
+<div class="plate"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt=""></div><span class="scroll">Scroll · proef</span></header>
+
+<div class="marquee"><div class="tr">Sandwich met avocado &amp; zalm <b>✦</b> Rundvleeskroketten van De Bourgondiër <b>✦</b> Pulled beef taco <b>✦</b> Bitterballen van De Bourgondiër <b>✦</b> Sandwich met avocado &amp; zalm <b>✦</b> Rundvleeskroketten van De Bourgondiër <b>✦</b> Pulled beef taco <b>✦</b> Bitterballen van De Bourgondiër <b>✦</b> Sandwich met avocado &amp; zalm <b>✦</b> Rundvleeskroketten van De Bourgondiër <b>✦</b> Pulled beef taco <b>✦</b> Bitterballen van De Bourgondiër <b>✦</b> Sandwich met avocado &amp; zalm <b>✦</b> Rundvleeskroketten van De Bourgondiër <b>✦</b> Pulled beef taco <b>✦</b> Bitterballen van De Bourgondiër <b>✦</b></div></div>
+
+<section class="sig" id="over"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1800&q=80&auto=format&fit=crop" alt="">
+<div class="txt"><small>Specialiteit van het huis</small><h2>Sandwich met avocado &amp; zalm</h2><p><span class="w">Stadsbistro</span> <span class="w">Nul33</span> <span class="w">zit</span> <span class="w">in</span> <span class="w">een</span> <span class="w">monumentaal</span> <span class="w">Jugendstil-pand</span> <span class="w">aan</span> <span class="w">de</span> <span class="w">Langestraat</span> <span class="w">met</span> <span class="w">ook</span> <span class="w">een</span> <span class="w">eerste</span> <span class="w">verdieping.</span> <span class="w">Je</span> <span class="w">komt</span> <span class="w">er</span> <span class="w">voor</span> <span class="w">koffie,</span> <span class="w">taart,</span> <span class="w">lunch</span> <span class="w">en</span> <span class="w">borrel.</span></p></div></section>
+
+<section class="menu" id="menu"><div class="obj receipt-bg"></div><div class="menu-head"><h2 class="kop">Op de kaart</h2>
+<p class="sub">Lunch, taart en borrelhappen in een monumentaal Jugendstil-pand.</p></div><div class="track"><article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=700&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+<div class="card-txt"><span class="nr">01</span><h3>Sandwich met avocado &amp; zalm</h3><p>Smashed avocado, gerookte zalm, roomkaas en gepocheerd ei</p>
+<span class="prijs">€ 13,50</span></div></article><article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=700&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+<div class="card-txt"><span class="nr">02</span><h3>Rundvleeskroketten van De Bourgondiër</h3><p>Twee kroketten met mosterd of mayonaise op brood</p>
+<span class="prijs">€ 12,50</span></div></article><article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+<div class="card-txt"><span class="nr">03</span><h3>Pulled beef taco</h3><p>Rundvlees, zoetzure groenten, chipotlesalsa en friet</p>
+<span class="prijs">€ 18,50</span></div></article><article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+<div class="card-txt"><span class="nr">04</span><h3>Bitterballen van De Bourgondiër</h3><p>Borrelhap van De Bourgondiër</p>
+</div></article></div></section>
+
+<section class="gal"><h2 class="kop">Even binnenkijken</h2><p class="sub">Stadsbistro Nul33 zit in een monumentaal Jugendstil-pand aan de Langestraat met ook een eerste verdieping. Je komt er voor koffie, taart, lunch en borrel.</p><figure class="pol" style="--r:-8deg;--x:4%"><img src="eigen-0.jpg" alt="" loading="lazy"></figure><figure class="pol" style="--r:5deg;--x:24%"><img src="eigen-1.jpg" alt="" loading="lazy"></figure><figure class="pol" style="--r:-3deg;--x:44%"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="" loading="lazy"></figure><figure class="pol" style="--r:9deg;--x:62%"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="" loading="lazy"></figure><figure class="pol" style="--r:-6deg;--x:80%"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="" loading="lazy"></figure></section>
+
+<section class="info" id="info"><div class="bon"><h3>OPENINGSTIJDEN</h3><ul><li><span>ma - vr</span><i></i><span>10:00 - 18:00</span></li><li><span>za</span><i></i><span>10:00 - 20:00</span></li><li><span>zo</span><i></i><span>10:00 - 18:00</span></li></ul><div class="tot">*** TOT ZO ***</div></div>
+<div class="adres"><h2 class="kop">Kom langs</h2><p>Langestraat 76<br>3811AJ Amersfoort<br><a href="tel:0333036083">033 303 6083</a></p>
+<a class="btn" href="#reserveer">Tafel reserveren →</a><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.386441700000001%2C52.1542335%2C5.3944417%2C52.1582335&layer=mapnik&marker=52.1562335%2C5.3904417" loading="lazy" title="Kaart"></iframe></div></section>
+
+<section class="res" id="reserveer"><h2 class="kop">Schuif aan</h2><p>Kies een dag, wij zetten de borden klaar.</p>
+<form id="rf"><label>Dag</label><div class="chips"><button type="button" class="chip on">ma<b>19</b></button><button type="button" class="chip">di<b>20</b></button><button type="button" class="chip">wo<b>21</b></button><button type="button" class="chip">do<b>22</b></button><button type="button" class="chip">vr<b>23</b></button><button type="button" class="chip">za<b>24</b></button><button type="button" class="chip">zo<b>25</b></button></div>
+<label>Tijd</label><div class="chips"><button type="button" class="chip">17:30</button><button type="button" class="chip">18:00</button><button type="button" class="chip">18:30</button><button type="button" class="chip on">19:00</button><button type="button" class="chip">19:30</button><button type="button" class="chip">20:00</button><button type="button" class="chip">20:30</button></div>
+<div class="row"><div class="stepper"><button type="button" id="min">−</button><b id="pers">2</b> personen<button type="button" id="plus">+</button></div>
+<button class="btn">Reserveer tafel</button></div></form></section>
+<footer>© 2026 Nul33 · Langestraat 76, Amersfoort · Foto's ter illustratie</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches, wide=innerWidth>760;
+addEventListener('scroll',()=>document.querySelector('nav').classList.toggle('vast',scrollY>60));
+let gestart=false;
+function intro(){
+  if(gestart)return;gestart=true;
+  if(rm)return;
+  gsap.timeline().from('h1 .ch',{yPercent:120,rotate:12,opacity:0,stagger:.04,duration:.9,ease:'back.out(1.6)'})
+    .from('.tag',{y:-30,opacity:0,duration:.5},'-=.7')
+    .from('.slogan',{y:30,opacity:0,duration:.6},'-=.5')
+    .from('.plate',{y:300,rotate:-90,duration:1.2,ease:'power3.out'},'-=.9')
+    .from('.fl',{scale:0,stagger:.12,duration:.7,ease:'back.out(2)'},'-=.8')
+    .from('.cut.l',{x:-200,opacity:0,duration:.8},'-=.8').from('.cut.r',{x:200,opacity:0,duration:.8},'<');
+}
+intro();addEventListener('load',()=>ScrollTrigger.refresh());
+if(!rm){
+  gsap.to('.plate',{y:-120,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-in',{y:140,opacity:.2,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.utils.toArray('.fl').forEach((f,i)=>{gsap.to(f,{yPercent:-60-i*30,rotate:i%2?20:-20,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});});
+  addEventListener('mousemove',ev=>{const x=ev.clientX/innerWidth-.5,y=ev.clientY/innerHeight-.5;
+    gsap.to('.fl',{x:i=>x*(30+i*18),y:i=>y*(20+i*10),duration:1});gsap.to('.plate img',{x:x*14,y:y*14,duration:1});});
+  const mq=gsap.to('.marquee .tr',{xPercent:-50,repeat:-1,duration:26,ease:'none'});
+  ScrollTrigger.create({onUpdate:s=>gsap.to(mq,{timeScale:1+Math.min(Math.abs(s.getVelocity())/400,5),duration:.2,overwrite:true})});
+  gsap.timeline({scrollTrigger:{trigger:'.sig',start:'top top',end:'+=120%',scrub:true,pin:true}})
+    .to('.sig img',{clipPath:'circle(75% at 50% 50%)',scale:1.08,ease:'none'})
+    .from('.sig h2',{y:80,opacity:0},0.2).to('.sig .w',{opacity:1,stagger:.05},0.3);
+  if(wide){const tr=document.querySelector('.track');
+    gsap.to(tr,{x:()=>-(tr.scrollWidth-innerWidth+80),ease:'none',scrollTrigger:{trigger:'.menu',start:'top top',end:()=>'+='+tr.scrollWidth,scrub:1,pin:true,invalidateOnRefresh:true}});}
+  gsap.from('.pol',{y:-700,rotate:i=>i%2?40:-40,opacity:0,stagger:.15,duration:1.1,ease:'bounce.out',scrollTrigger:{trigger:'.gal',start:'top 55%'}});
+  gsap.from('.bon',{clipPath:'inset(0 0 100% 0)',duration:1.6,ease:'steps(14)',scrollTrigger:{trigger:'.info',start:'top 70%'}});
+  gsap.from('.adres > *',{x:60,opacity:0,stagger:.12,scrollTrigger:{trigger:'.info',start:'top 70%'}});
+  gsap.from('.res .kop',{scale:.6,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:'.res',start:'top 70%'}});
+  gsap.from('.res form',{y:80,opacity:0,duration:.9,scrollTrigger:{trigger:'.res',start:'top 60%'}});
+  const c=document.querySelector('.cursor');
+  addEventListener('mousemove',ev=>gsap.to(c,{x:ev.clientX,y:ev.clientY,duration:.15}));
+  document.querySelectorAll('.card,.pol').forEach(el=>{el.addEventListener('mouseenter',()=>{c.classList.add('big');c.textContent='Proef'});
+    el.addEventListener('mouseleave',()=>{c.classList.remove('big');c.textContent=''});});
+  document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemove',ev=>{const r=b.getBoundingClientRect();
+    gsap.to(b,{x:(ev.clientX-r.left-r.width/2)*.3,y:(ev.clientY-r.top-r.height/2)*.3,duration:.3})});
+    b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));});
+}
+document.querySelectorAll('.chips').forEach(g=>g.addEventListener('click',ev=>{const b=ev.target.closest('.chip');if(!b)return;
+  g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');}));
+let p=2;const P=document.getElementById('pers');
+document.getElementById('min').onclick=()=>{p=Math.max(1,p-1);P.textContent=p};document.getElementById('plus').onclick=()=>{p=Math.min(12,p+1);P.textContent=p};
+document.getElementById('rf').addEventListener('submit',ev=>{ev.preventDefault();const f=ev.target;
+  f.innerHTML='<div class="ok">Tafel voor '+p+' staat klaar 🍽️<br><small style="font:500 15px DM Sans">Dit is een voorbeeld. In de echte site komt hier jullie reserveringssysteem.</small></div>';
+  gsap.from(f,{scale:.9,duration:.6,ease:'back.out(2)'});});
+</script></body></html>
