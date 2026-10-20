@@ -51,7 +51,7 @@ nav .links{display:flex;gap:26px;font-weight:600;font-size:15px}nav .links a{tex
 .hero-in{position:relative;z-index:5;padding:0 16px;margin-top:-16vh}
 .tag{display:inline-block;font:700 12px var(--body);letter-spacing:.22em;text-transform:uppercase;background:var(--paper);color:#111;padding:9px 15px;box-shadow:0 4px 0 var(--accent)}
 h1{font-family:var(--font),serif;font-weight:900;line-height:.86;margin:24px 0 20px;letter-spacing:-.02em;color:var(--h1);text-shadow:0 4px 0 var(--accent),0 24px 50px #0005}
-h1 .ch{display:inline-block;will-change:transform}
+h1 .ch{display:inline-block;will-change:transform}h1 .wd{display:inline-block;white-space:nowrap}
 .slogan{display:inline-block;max-width:560px;font-size:clamp(16px,2vw,21px);background:var(--paper);color:#111;padding:14px 22px;transform:rotate(-1.5deg);box-shadow:0 14px 34px #0003}
 .plate{position:absolute;z-index:4;left:50%;bottom:-26vmin;width:min(62vmin,560px);aspect-ratio:1;margin-left:calc(min(62vmin,560px) / -2);border-radius:50%;background:#fff;padding:16px;
  box-shadow:0 0 0 1px #0001,0 50px 90px #0006,inset 0 0 0 8px #f1f1f1}
@@ -61,12 +61,13 @@ h1 .ch{display:inline-block;will-change:transform}
 .cut{position:absolute;z-index:4;bottom:4%;height:46vmin;width:auto}.cut.l{left:calc(50% - min(46vmin,410px))}.cut.r{right:calc(50% - min(46vmin,410px))}
 .scroll{position:absolute;z-index:6;bottom:22px;left:22px;font:700 11px var(--body);letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;color:var(--h1);opacity:.8}
 @media(max-width:700px){.cut,.fl2,.fl3{display:none}.plate{bottom:-18vmin;width:78vmin;margin-left:-39vmin}}
-.marquee{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:22px 0;transform:rotate(-2deg) scale(1.05);position:relative;z-index:6;margin-top:-30px}
+.marquee{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:22px 0;transform:rotate(-2deg) scale(1.05);position:relative}
+.mqw{position:relative;z-index:6;margin:-50px 0 -20px;padding:20px 0;overflow:hidden;pointer-events:none}
 .marquee .tr{display:inline-block;font:900 clamp(34px,6vw,72px)/1 var(--font),serif;text-transform:uppercase;will-change:transform}
 .marquee b{color:var(--paper);opacity:.6;margin:0 .3em}
 .sig{position:relative;height:100svh;overflow:hidden;background:#000}
 .sig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(18% at 50% 50%);will-change:clip-path,transform}
-.sig .txt{position:absolute;z-index:2;left:clamp(16px,6vw,90px);bottom:12vh;max-width:640px;color:#fff;text-shadow:0 2px 24px #000a}
+.sig .txt{position:absolute;z-index:2;left:clamp(16px,6vw,90px);right:clamp(16px,6vw,90px);bottom:12vh;max-width:640px;color:#fff;text-shadow:0 2px 24px #000a}
 .sig .txt small{font:700 12px var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--paper)}
 .sig h2{font:900 clamp(44px,7vw,100px)/.9 var(--font),serif;margin:12px 0 18px}
 .sig p{font-size:clamp(17px,1.8vw,21px);line-height:1.5}.sig .w{opacity:.15;display:inline-block}
@@ -89,7 +90,7 @@ h1 .ch{display:inline-block;will-change:transform}
 .pol{position:absolute;top:36%;left:var(--x);width:min(280px,40vw);background:#fff;padding:12px 12px 44px;box-shadow:0 24px 50px #0003;transform:rotate(var(--r))}
 .pol img{aspect-ratio:1;object-fit:cover;width:100%}
 .pol:nth-of-type(even){top:52%}
-@media(max-width:700px){.pol{width:46vw}.pol:nth-of-type(n+4){display:none}}
+@media(max-width:700px){.gal{min-height:0;padding:90px 16px 70px;text-align:center}.gal .sub{margin-bottom:34px}.pol{position:relative;top:auto!important;left:auto;display:inline-block;vertical-align:top;width:42vw;margin:0 1.5vw 4vw;padding:8px 8px 30px}.pol:nth-of-type(n+5){display:none}}
 .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:56px;max-width:1150px;margin:auto;padding:110px 16px;align-items:start}
 .bon{background:#fff;color:#111;font-family:'Space Mono',monospace;padding:34px 28px 40px;box-shadow:0 26px 50px #0002;transform:rotate(2deg);transform-origin:top;
  -webkit-mask:radial-gradient(circle 8px at 50% 100%,#0000 98%,#000) 0 0/22px 100% repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 8px) no-repeat}
@@ -115,12 +116,16 @@ footer{padding:50px 16px 100px;text-align:center;font-size:14px;opacity:.7}
 .cursor.big{width:84px;height:84px}
 @media(hover:none){.cursor{display:none}}
 html{overflow-x:hidden}body{overflow-x:clip}
-@media(max-width:760px){nav{padding:12px 16px;text-shadow:0 1px 10px #0007}nav.vast{text-shadow:none}nav .btn{min-height:44px;padding:11px 18px}nav .logo{font-size:20px;min-height:44px;min-width:44px;display:flex;align-items:center;max-width:55vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- .demo-bar{left:12px;right:12px;text-align:center;font-size:13px;min-height:44px;display:flex;align-items:center;justify-content:center}
+@media(max-width:760px){nav,nav.vast{padding:10px 16px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#111;box-shadow:0 1px 0 #0001;text-shadow:none}h1{text-shadow:0 4px 0 var(--accent),0 2px 22px #000b}nav .btn{min-height:44px;padding:11px 18px}nav .logo{font-size:clamp(14px,4.6vw,20px);line-height:1.05;min-height:44px;min-width:0;flex:1 1 auto;margin-right:10px;display:flex;align-items:center;white-space:normal}nav .btn{flex:none}
+ .demo-bar{left:12px;right:12px;text-align:center;font-size:13px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:.3em;flex-wrap:wrap}
  .tag,.sig .txt small,.res label,.nr,.scroll{font-size:13px}.card p,.bon li,footer,.chip{font-size:15px}.sub{font-size:16px}
  .chip{min-height:48px;min-width:64px}.stepper button{width:44px;height:44px}.adres a[href^=tel]{display:inline-block;padding:10px 0}
  .btn{min-height:44px}.res form{padding:20px 16px}.res .btn{margin-left:0;width:100%;justify-content:center}.row{gap:16px}
  footer{padding-bottom:110px}.info{gap:40px;padding:80px 16px}.bon{transform:rotate(1deg)}}
+h1,h2,h3,.kop{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+@media(max-width:760px){.sig h2{font-size:clamp(34px,10vw,48px)}.card h3{font-size:24px}}
+@media(max-width:760px){.adres p{font-size:18px;overflow-wrap:anywhere}}
+@media(max-width:360px){nav .btn{padding:10px 14px;font-size:14px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style></head><body>
 <div class="cursor"></div>
@@ -131,11 +136,11 @@ html{overflow-x:hidden}body{overflow-x:clip}
 <svg class="cut l" viewBox="0 0 40 400"><path d="M8 0v110M20 0v110M32 0v110M6 110q14 40 28 0M20 135v265" stroke="#d6d6d6" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
 <svg class="cut r" viewBox="0 0 40 400"><path d="M20 0q20 50 0 170v230" stroke="#d6d6d6" stroke-width="9" fill="none" stroke-linecap="round"/></svg>
 <div class="hero-in"><span class="tag">Aan tafel · brasserie · Utrecht</span>
-<h1 style="font-size:clamp(46px,min(13vw,177px),180px)"><span class="ch">U</span><span class="ch">n</span><span class="ch">c</span><span class="ch">l</span><span class="ch">e</span><span class="ch">&nbsp;</span><span class="ch">J</span><span class="ch">i</span><span class="ch">m</span></h1>
+<h1 style="font-size:clamp(30px,min(13vw,25.0vw,177px),180px)"><span class="wd"><span class="ch">U</span><span class="ch">n</span><span class="ch">c</span><span class="ch">l</span><span class="ch">e</span></span> <span class="wd"><span class="ch">J</span><span class="ch">i</span><span class="ch">m</span></span></h1>
 <p class="slogan">Moderne bar en brasserie op loopafstand van Beatrixtheater, Jaarbeurs en Centraal.</p></div>
 <div class="plate"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt=""></div><span class="scroll">Scroll · proef</span></header>
 
-<div class="marquee"><div class="tr">Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b></div></div>
+<div class="mqw"><div class="marquee"><div class="tr">Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b> Carpaccio <b>✦</b> Camembert om te delen <b>✦</b> Jim&#x27;s Burger <b>✦</b> Entrecôte 200 gr <b>✦</b> Pizza Diavola <b>✦</b> Pappardelle funghi <b>✦</b></div></div></div>
 
 <section class="sig" id="over"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1800&q=80&auto=format&fit=crop" alt="">
 <div class="txt"><small>Specialiteit van het huis</small><h2>Carpaccio</h2><p><span class="w">Uncle</span> <span class="w">Jim</span> <span class="w">is</span> <span class="w">een</span> <span class="w">moderne</span> <span class="w">bar</span> <span class="w">en</span> <span class="w">brasserie</span> <span class="w">aan</span> <span class="w">de</span> <span class="w">Croeselaan,</span> <span class="w">vlak</span> <span class="w">bij</span> <span class="w">het</span> <span class="w">Beatrixtheater,</span> <span class="w">de</span> <span class="w">Jaarbeurs</span> <span class="w">en</span> <span class="w">Utrecht</span> <span class="w">Centraal.</span> <span class="w">Groepen</span> <span class="w">zijn</span> <span class="w">welkom</span> <span class="w">voor</span> <span class="w">lunch,</span> <span class="w">diner</span> <span class="w">of</span> <span class="w">borrel.</span></p></div></section>
