@@ -114,6 +114,13 @@ footer{padding:50px 16px 100px;text-align:center;font-size:14px;opacity:.7}
 .cursor{position:fixed;z-index:95;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--accent);pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s;display:grid;place-items:center;color:#fff;font:700 12px var(--body)}
 .cursor.big{width:84px;height:84px}
 @media(hover:none){.cursor{display:none}}
+html{overflow-x:hidden}body{overflow-x:clip}
+@media(max-width:760px){nav{padding:12px 16px;text-shadow:0 1px 10px #0007}nav.vast{text-shadow:none}nav .btn{min-height:44px;padding:11px 18px}nav .logo{font-size:20px;min-height:44px;min-width:44px;display:flex;align-items:center;max-width:55vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .demo-bar{left:12px;right:12px;text-align:center;font-size:13px;min-height:44px;display:flex;align-items:center;justify-content:center}
+ .tag,.sig .txt small,.res label,.nr,.scroll{font-size:13px}.card p,.bon li,footer,.chip{font-size:15px}.sub{font-size:16px}
+ .chip{min-height:48px;min-width:64px}.stepper button{width:44px;height:44px}.adres a[href^=tel]{display:inline-block;padding:10px 0}
+ .btn{min-height:44px}.res form{padding:20px 16px}.res .btn{margin-left:0;width:100%;justify-content:center}.row{gap:16px}
+ footer{padding-bottom:110px}.info{gap:40px;padding:80px 16px}.bon{transform:rotate(1deg)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style></head><body>
 <div class="cursor"></div>
@@ -155,7 +162,7 @@ footer{padding:50px 16px 100px;text-align:center;font-size:14px;opacity:.7}
 <a class="btn" href="#reserveer">Tafel reserveren →</a><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.9103228%2C51.983679599999995%2C5.918322799999999%2C51.9876796&layer=mapnik&marker=51.9856796%2C5.9143228" loading="lazy" title="Kaart"></iframe></div></section>
 
 <section class="res" id="reserveer"><h2 class="kop">Schuif aan</h2><p>Kies een dag, wij zetten de borden klaar.</p>
-<form id="rf"><label>Dag</label><div class="chips"><button type="button" class="chip on">ma<b>19</b></button><button type="button" class="chip">di<b>20</b></button><button type="button" class="chip">wo<b>21</b></button><button type="button" class="chip">do<b>22</b></button><button type="button" class="chip">vr<b>23</b></button><button type="button" class="chip">za<b>24</b></button><button type="button" class="chip">zo<b>25</b></button></div>
+<form id="rf"><label>Dag</label><div class="chips"><button type="button" class="chip on">di<b>20</b></button><button type="button" class="chip">wo<b>21</b></button><button type="button" class="chip">do<b>22</b></button><button type="button" class="chip">vr<b>23</b></button><button type="button" class="chip">za<b>24</b></button><button type="button" class="chip">zo<b>25</b></button><button type="button" class="chip">ma<b>26</b></button></div>
 <label>Tijd</label><div class="chips"><button type="button" class="chip">17:30</button><button type="button" class="chip">18:00</button><button type="button" class="chip">18:30</button><button type="button" class="chip on">19:00</button><button type="button" class="chip">19:30</button><button type="button" class="chip">20:00</button><button type="button" class="chip">20:30</button></div>
 <div class="row"><div class="stepper"><button type="button" id="min">−</button><b id="pers">2</b> personen<button type="button" id="plus">+</button></div>
 <button class="btn">Reserveer tafel</button></div></form></section>
